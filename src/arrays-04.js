@@ -22,6 +22,7 @@
 function getAbsoluteSum(nums) {
   // TODO: implement code
   // HINT: Use a loop and Math.abs() to add the absolute values.
+  return nums.reduce((sum, num) => sum + Math.abs(num), 0);
 }
 
 /**
@@ -32,6 +33,7 @@ function getAbsoluteSum(nums) {
 function removeStrings(arr) {
   // TODO: implement code
   // HINT: Use filter() and check that typeof item is not 'string'.
+  return arr.filter(item => typeof item !== 'string');
 }
 
 /**
@@ -42,6 +44,7 @@ function removeStrings(arr) {
 function findMinMax(arr) {
   // TODO: implement code
   // HINT: If the array is not empty, use Math.min and Math.max with spread syntax.
+  return arr.length ? [Math.min(...arr), Math.max(...arr)] : [];
 }
 
 /**
@@ -53,6 +56,7 @@ function findMinMax(arr) {
 function getTelNo(numbers) {
   // TODO: implement code
   // HINT: Make a shallow copy, then use array methods (like splice and join) to format.
+  return `(${numbers.slice(0, 3).join('')}) ${numbers.slice(3, 6).join('')}-${numbers.slice(6).join('')}`;
 }
 
 module.exports = {
